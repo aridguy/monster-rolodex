@@ -1,31 +1,39 @@
 import { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
 
-  constructor(){
+  constructor() {
     super();
-      this.state = {
-       Monstar1:{
-            name: 'Ariyo'
-       },
+    this.state = {
+      monsters: [
+        {
+          name: 'Ariyo',
+        },
 
-       Monstar2: {
-        name: 'Taiwo'
-       },
+        {
+          name: 'Taiwo',
+        },
+        {
+          name: 'damilare',
+        },
+        {
+          name: 'aliyu',
+        }
+      ]
 
-       monster3:{
-        name: 'damilare'
-       },
-      
     };
   }
 
   render() {
     return (
       <div className="App">
-        
+        {
+          this.state.monsters.map((monsters) => {
+            return <h1>{monsters.name}</h1>
+          })
+        }
       </div>
     );
   }
