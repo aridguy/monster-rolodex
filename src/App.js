@@ -10,16 +10,20 @@ class App extends Component {
       monsters: [
         {
           name: 'Ariyo',
+          key: '243fgvg'
         },
 
         {
           name: 'Taiwo',
+          key: '243huvg'
         },
         {
           name: 'damilare',
+          key: '1234gvh'
         },
         {
           name: 'aliyu',
+          key: '243fgvggu'
         }
       ]
 
