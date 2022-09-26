@@ -8,26 +8,24 @@ class App extends Component {
     super();
     this.state = {
       monsters: [
-        {
-          name: 'Ariyo',
-          key: '243fgvg'
-        },
-
-        {
-          name: 'Taiwo',
-          key: '243huvg'
-        },
-        {
-          name: 'damilare',
-          key: '1234gvh'
-        },
-        {
-          name: 'aliyu',
-          key: '243fgvggu'
-        }
+       
       ]
 
     };
+  }
+
+  componentDidMount(){
+    fetch('https://spotifystefan-skliarovv1.p.rapidapi.com/addTracksToPlaylist')
+    .then((response) => response.json())
+    .then((users) => this.setState(() => {
+      return{monsters: users}
+    },
+
+    () => {
+      console.log(this.state)
+    }
+
+    ));
   }
 
   render() {
@@ -38,6 +36,8 @@ class App extends Component {
             return <h1>{monsters.name}</h1>
           })
         }
+
+        
       </div>
     );
   }
